@@ -1,0 +1,33 @@
+<div style="width: 400px;">
+  <h5>Cerca Per...</h5>
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+      <select class="form-control" name="tipoRicerca" id="tipoRicerca" required [(ngModel)]="tipoRicerca" (ngModelChange)="SelectValue()">
+          <option value="name">Nome</option>
+          <option value="age">Età</option>
+        </select>
+  </div>
+
+  <div *ngIf="selected">
+      <input type="text" class="form-control" id="valoreRicerca" required [(ngModel)]="valoreRicerca" name="valoreRicerca">
+      <br>
+      <div class="btn-group">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+  </div>
+  
+</form>
+</div>
+<hr>
+<table *ngIf="pressed" class="table table-striped">
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Eta</th>
+    </tr>
+    <tr *ngFor="let customer of customers">
+    <td>{{customer.id}}</td>
+    <td>{{customer.name}}</td>
+    <td>{{customer.age}}</td>
+    </tr>
+</table>

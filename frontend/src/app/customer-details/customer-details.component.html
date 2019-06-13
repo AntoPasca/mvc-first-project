@@ -1,0 +1,10 @@
+<td>{{customer.id}}</td>
+<td>{{customer.name}}</td>
+<td>{{customer.age}}</td>
+<td>{{customer.active}}</td>
+<td class="p-grid">
+  <button pButton class="p-col" type="button" *ngIf='!customer.active' (click)='updateActive(true)' label="Attivo" class="ui-button-info"></button>
+  <button pButton class="p-col" type="button" *ngIf='customer.active' (click)='updateActive(false)' label="Inattivo" class="ui-button-info"></button>
+  <button pButton class="p-col" type="button" (click)='deleteCustomer()' label="Elimina" class="ui-button-danger"></button>
+  <button pButton class="p-col" type="button" (click)='pressModifica()' label="Modifica" class="ui-button-warning"></button>
+</td>

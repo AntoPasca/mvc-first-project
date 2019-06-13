@@ -1,0 +1,31 @@
+:host >>> .ui-widget-header{
+    background: #525252 !important;
+    border: 0px;
+}
+
+:host >>> .ui-tabmenu .ui-tabmenu-nav{
+    padding: 0 !important;
+    margin-left: 140px;
+}
+
+:host >>> .ui-corner-all{
+    border-radius: 0px;
+}
+
+:host >>> .ui-state-active{
+    border-color: rgb(94, 157, 194);
+    background: #70B5DE !important;
+}
+
+:host >>> .ui-state-default{
+    background: #929497;
+}
+
+:host >>> .ui-tabview{
+    text-align: center;
+}
+
+:host >>> .ui-widget-content{
+    border: 1px solid #525252;
+    background: #525252;
+}

@@ -1,0 +1,31 @@
+<td>{{car.id}}</td>
+<td>
+    <div [hidden]="update">
+        {{car.model}}
+    </div>
+    <div [hidden]="!update">
+        <input [(ngModel)]="car.model" type="text" value="{{car.model}}" >
+    </div>
+</td>
+<td>
+    <div [hidden]="update">
+        {{car.targa}}
+    </div>
+    <div [hidden]="!update">
+        <input [(ngModel)]="car.targa" type="text" value="{{car.targa}}" >
+    </div>
+</td>
+<td>
+    <div [hidden]="update">
+        {{car.cilindrata}}
+    </div>
+    <div [hidden]="!update">
+        <input [(ngModel)]="car.cilindrata" type="text" value="{{car.cilindrata}}" >
+    </div>
+</td>
+<td>
+    <div>
+        <span class="btn btn-warning" (click)='updateCar()'>Update</span>
+        <span class="btn btn-danger" (click)='deleteCar()'>Delete</span>
+    </div>
+</td>
