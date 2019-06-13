@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Utils utils = new Utils();
+		League league = utils.setSerieA();
+		
+		
+		league.teams.stream()
+			.filter(team -> team.stadium.startsWith("S"))
+			.distinct()
+			.flatMap(team -> team.getRosters().stream())
+			.map(Player::getAge)
+			.sorted()
+			.distinct()
+			.forEach(System.out::println);
+	}
+
+}

@@ -1,0 +1,10 @@
+import java.util.List;
+
+public class Team {
+	String name;
+	String coach;
+	String stadium;
+	List<String> rosters;
+	
+	
+}
