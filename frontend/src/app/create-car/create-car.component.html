@@ -1,0 +1,34 @@
+<div class="container-fluid col-md-3" [hidden]="submitted" style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="model">Modello</label>
+      <input type="text" class="form-control" id="model" required [(ngModel)]="car.model" name="model">
+    </div>
+
+    <div class="form-group">
+      <label for="targa">Targa</label>
+      <input type="text" class="form-control" id="targa" required [(ngModel)]="car.targa" name="targa">
+    </div>
+
+    <div class="form-group">
+      <label for="cilindrata">Cilindrata</label>
+      <input type="text" class="form-control" id="cilindrata" required [(ngModel)]="car.cilindrata" name="cilindrata">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!success">
+  <div class="alert alert-success col-md-4">
+    <strong>Auto Creata</strong> correttamente.
+  </div>
+  <button class="btn btn-success" (click)="newCar()">Aggiungi nuova auto</button>
+</div>
+
+<div [hidden]="!error">
+  <div class="alert alert-danger col-md-4">
+    <strong>Errore</strong> nella creazione dell'auto.
+  </div>
+  <button class="btn btn-success" (click)="newCar()">Riprova creazione</button>
+</div>
